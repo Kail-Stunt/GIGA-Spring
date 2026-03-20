@@ -1,9 +1,11 @@
 package org.skypro.skyshop.model.basket;
 
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
 @Service
+@Component
 public class ProductBasket {
     private final Map<UUID, Integer> products;
 
