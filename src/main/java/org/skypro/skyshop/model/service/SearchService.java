@@ -15,11 +15,11 @@ public class SearchService {
     }
 
     public Collection<SearchResult> search(String pattern) {
-//        if (pattern == null || pattern.trim().isEmpty()) {
-//            return storage.getAllSearchableItems().stream()
-//                    .map(SearchResult::fromSearchable)
-//                    .collect(Collectors.toList());
-//        }
+        if (pattern == null || pattern.trim().isEmpty()) {
+            return storage.getAllSearchableItems().stream()
+                    .map(SearchResult::fromSearchable)
+                    .collect(Collectors.toList());
+        }
 
         return storage.getAllSearchableItems().stream()
                 .filter(item -> item.searchTerm() != null &&
