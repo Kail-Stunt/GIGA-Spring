@@ -67,6 +67,10 @@ public class StorageService {
         return Collections.unmodifiableCollection(searchableItems);
     }
 
+    public Optional<Product> getProductById(UUID id) {
+        return Optional.ofNullable(productMap.get(id));
+    }
+
     @Override
     public String toString() {
         return "StorageService{" +
